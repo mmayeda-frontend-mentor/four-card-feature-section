@@ -39,13 +39,21 @@ a:active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: red;
+}
+
+.overview__header {
+  display: block;
+}
+.overview__header.overview__header--bold {
+  font-weight: bold;
 }
 
 .cards {
   display: grid;
   gap: 20px;
   width: 80%;
-  max-width: 450px;
+  max-width: 800px;
   grid-template-columns: 1fr;
 }
 
@@ -88,6 +96,25 @@ a:active {
   margin-top: 30px;
 }
 
+@media only screen and (min-width: 1700px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  .card {
+    grid-row: span 2;
+  }
+  .card:first-child,
+.card:last-child {
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  .card:nth-child(3) {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 2;
+  }
+}
 main {
   display: flex;
   flex-direction: column;

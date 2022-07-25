@@ -5,4 +5,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: red;
+}
+
+.overview__header {
+  display: block;
+
+  &.overview__header--bold {
+    font-weight: bold;
+  }
 }
