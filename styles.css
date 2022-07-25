@@ -18,7 +18,6 @@
 }
 
 body {
-  min-height: 100vh;
   background-color: var(--color-neutral-light-gray);
 }
 
@@ -31,4 +30,69 @@ a:active {
 
 :root {
   --font-poppins: "Poppins", sans-serif;
+}
+
+.overview {
+  margin-top: 70px;
+  width: 80%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  display: grid;
+  gap: 20px;
+  width: 80%;
+  max-width: 450px;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card__border {
+  position: absolute;
+  top: -1px;
+  height: 5px;
+  width: 100%;
+}
+.card__border.card__border--red {
+  background-color: var(--color-primary-red);
+}
+.card__border.card__border--cyan {
+  background-color: var(--color-primary-cyan);
+}
+.card__border.card__border--orange {
+  background-color: var(--color-primary-orange);
+}
+.card__border.card__border--blue {
+  background-color: var(--color-primary-blue);
+}
+
+.card__content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  gap: 5px;
+}
+
+.card__icon {
+  align-self: flex-end;
+  margin-top: 30px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 70px;
 }
